@@ -1,0 +1,38 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header{
+    
+    display: inline-flex;
+}
+.left{
+    align-items: flex-end;
+    /* text-align: left; */
+}
+.right{
+    position: relative;
+    text-align: right;
+   
+}
+.header li{
+    
+    display: inline-flex;
+    /* background-color: green; */
+    
+}
+
+.header li a{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: .5rem;
+    color: black;
+    text-decoration: none;
+    background-color: yellow;
+}
+
+.header li a:hover{
+    background-color: black;
+    color: white;
+    /* font-weight: bold; */
+}
