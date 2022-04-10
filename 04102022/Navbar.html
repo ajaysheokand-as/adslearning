@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        .navbar{
+            overflow: auto;
+            /* border: 1px solid black; */
+        }
+        .right li{
+            
+            display: inline;
+        }
+        .right li a{
+            text-decoration: none;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .right li a:hover{
+            background-color: green;
+
+        }
+        .left{
+            /* border: 2px solid black; */
+            position: relative;
+            float: left;
+            display: inline;
+            margin-left: 100px;
+        }
+        .right{
+            margin-right: 10px;
+            float: right;
+        }
+        h2{
+            margin-left: 10px;
+        }
+        /* Css for Vertical Navbar */
+        .ver{
+            /* position: relative; */
+            /* margin-top: 100px; */
+            float: left;
+            /* overflow: auto; */
+            width: 100%;
+            height: 100%;
+            background-color: azure;
+        }
+        .ver-left ul {
+            text-align: center;
+            list-style-type: none;
+            width: 20%;
+            
+        }
+        
+        .ver-left li a{
+            /* width: 100%; */
+            text-decoration: none;
+            display: block;
+            margin: 5px;
+            padding: 5px;
+            background-color: green;
+            color: white;
+        }
+        .ver-left li a:hover{
+            background-color: rgb(13, 58, 13);
+        }
+        .ver-left{
+            width: 100%;
+            /* overflow: auto; */
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- Horiontal Navbar -->
+    <div class="navbar">
+    <div class="left">
+        <h2>Navbar</h2>
+    </div>
+    <div class="right">
+        <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> News </a> </li>
+            <li> <a href="#"> Contact </a> </li>
+            <li> <a href="#"> About </a> </li>
+        </ul>
+    </div>
+</div>
+   <h2>Vertical Header</h2>
+    <!-- Vertical Navbar -->
+    <div class="ver">
+        <div class="ver-left">
+        <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> News </a> </li>
+            <li> <a href="#"> Contact </a> </li>
+            <li> <a href="#"> About </a> </li>
+        </ul>
+       
+    </div>
+    
+    </div>
+    
+</body>
+</html>

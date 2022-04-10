@@ -3,15 +3,18 @@ body{
 }
 .header{
     
-    display: inline-flex;
+    display: inline-block;
 }
 .left{
-    align-items: flex-end;
+    float: left;
+    /* align-items: flex-end; */
     /* text-align: left; */
 }
 .right{
-    position: relative;
-    text-align: right;
+    /* float: right; */
+    position: absolute;
+    right: 0px;
+    
    
 }
 .header li{
