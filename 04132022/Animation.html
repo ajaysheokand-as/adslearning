@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            position: relative;
+            background-color: green;
+            animation-name: anm;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            position: relative;
+            background-color: green;
+            animation-name: anm;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+
+        }
+        @keyframes anm {
+            0%  {background-color: green; left:0px; top:0px; }
+            25% {background-color: red; left:200px; top:0px; }
+            50% {background-color: black; left:200px; top:200px; }
+            75% {background-color: blue; left:0px; top:200px; }
+            100% {background-color: yellow; left:0px; top:0px; }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    <div class="box">
+        <h2 style="text-align: center; color: white; ">Hey .... </h2>
+    </div>
+    <div class="box2">
+        <h2 style="text-align: center; color: white; ">Hey .... </h2>
+    </div>
+</body>
+</html>

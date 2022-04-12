@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effect</title>
+    <style>
+        .box{
+            width: 50%;
+            border: 3px solid black;
+            box-shadow: 0 0 5px;
+            padding: 10px;
+        }
+        .te1{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            background-color: rgb(2, 8, 13);
+            color: white;
+        }
+        .te2{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+        .te2:hover{
+            overflow: visible;
+            background-color: green;
+            
+            
+        }
+        .te3{
+            word-wrap: break-word;
+        }
+        .te4{
+            writing-mode: vertical-lr;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Text Effect
+    </h1>
+    <h2> Over flow Clip</h2>
+    <p class="box te1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est labore delectus corrupti consequuntur aperiam! Laudantium iusto architecto placeat facilis sapiente aliquid labore odit doloribus ipsa ab, fugit fugiat earum? Animi.
+    </p>
+    <h2> Over flow ellipsis (Mouse over)</h2>
+    <p class="box te2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt hic blanditiis repudiandae accusantium, nobis expedita nemo autem perspiciatis maiores qui facilis tempore, in, similique voluptates eum! Eaque, voluptatem dicta.
+    </p>
+    <h2>Word Wrap</h2>
+    <p class="box te3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt hic blanditiis repudiandae accusantium, nobis expedita nemo autem perspiciatis maiores qui facilis tempore, in, similique voluptates eum! Eaque, voluptatem dicta.
+    </p>
+    <h2>Text Mode</h2>
+    <p class="box">
+       <span class="te4"> Lorem </span> ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt hic blanditiis repudiandae accusantium, nobis expedita nemo autem perspiciatis maiores qui facilis tempore, in, similique voluptates eum! Eaque, voluptatem <span class="te4"> dicta. </span>
+       
+    </p>
+</body>
+</html>

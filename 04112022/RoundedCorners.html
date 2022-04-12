@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Corners</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .rct{
+            display: inline-flex;
+            position: relative;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        .rc1{
+            border: 1px solid green;
+            background-color: green;
+            border-radius: 25px;
+        }
+        .rc2{
+            background-color: red;
+            border-radius: 15px 50px;
+        }
+        .rc3{
+            background-color: blue;
+            border-radius: 15px 50px 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Border Radious </h1>
+    <div class="rct">
+    <div class="box rc1">
+        1
+    </div>
+    <div class="box rc2">
+        2
+    </div>
+    <div class="box rc3">
+        3
+    </div>
+</div>
+</body>
+</html>

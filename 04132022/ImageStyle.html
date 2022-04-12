@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Style</title>
+    <style>
+        img{
+            height: 200px;
+            width: auto;
+            margin: 10px;
+            padding: 10px;
+           
+        }
+        .pic{
+            max-width: 100%;
+            align-items: center;
+            /* border: 1px solid black; */
+            width: 100%;
+            position: relative;
+            display: inline-flex;
+        }
+        .s1{
+            border-radius: 50%;
+        }
+        .s2{
+            border-radius: 15%;
+        }
+        .s3{
+            border:2px solid rgb(173, 208, 220) ;
+            padding: 5px;
+        }
+        .s3:hover{
+            box-shadow: 0 0 5px black;
+        }
+        .fl{
+            max-width: 100%;
+            height: auto;
+            align-items: center;
+        }
+        .s4{
+            opacity: 70%;
+        }
+        .s4:hover{
+            opacity: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Image Styles </h1>
+    <div class="pic">
+        <img class="s1" src="../img/img2.png">
+        <img class="s2" src="../img/img3.png">
+        <img class="s3" src="../img/img3.webp">
+    </div>
+    <!-- <div class="fl">
+        <img src="../img/bg/b2.jpeg">
+    </div> -->
+    <div class="pic">
+        <img class="s4" src="../img/img3.png">
+        <img class="s3" src="../img/img3.webp">
+        <img class="s3 s1"  src="../img/libgju.jpeg">
+    </div>
+    
+</body>
+</html>
