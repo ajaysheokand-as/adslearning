@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Reflection</title>
+    <style>
+        .rd{
+            
+            height: 100px;
+            width: 200px;
+            border-radius:50%;
+            -webkit-box-reflect: below 10px;
+            
+            
+        }
+        .rl{
+            height: 100px;
+            width: 200px;
+            border-radius: 30%;
+            -webkit-box-reflect: right 10px;
+        }
+        .pic{
+            width: 100%;
+            /* position: absolute; */
+            /* border: 1px solid black; */
+           
+        }
+        img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Reflection</h1>
+    <div class="pic">
+        <img class="rd" src="../img/img3.png">
+        <img class="rl" src="../img/img2.png">
+    </div>
+</body>
+</html>
