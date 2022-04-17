@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node Js</title>
+    <style>
+      .container {
+        position: absolute;
+        left: 20%;
+      }
+      .add_product {
+        display: block;
+        float: left;
+        margin-right: 100px;
+      }
+      .show_product {
+        display: inline-block;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 7px;
+      }
+      table tr:hover {
+        background-color: rgb(170, 222, 205);
+      }
+      .table1 a {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 2px;
+        color: white;
+        background-color: black;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .table1 a:hover {
+        border: 1px solid green;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+      }
+
+      form {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h3 style="text-align: center;"> Product Add, Delete, Update, Get ProductByID</h3>
+      <div class="add_product">
+        <h3 style="text-align: center">Add Product</h3>
+        <form action="http://localhost:3000/product" method="post">
+          <input type="text" hidden id="p_id" name="p_id" placeholder="Product id" />
+          <input type="text" id="p_name" name="p_name" placeholder="Product Name" /><br />
+          <br />
+          <input type="number" id="price" name="price" placeholder="Price" /> <br />
+          <br />
+          <button type="submit" id="addProduct">Add Product</button>
+        </form>
+        <button hidden type="submit" onclick="updateProduct();" id="update">Update</button>
+      </div>
+      <div class="show_product">
+        <table class="table1">
+          <tr>
+            <th style="text-align: center; border: none" colspan="4">
+              All Product
+            </th>
+          </tr>
+
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th colspan="2">Action</th>
+          </tr>
+          <tbody id="tbl">
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        getProduct();
+      });
+
+    //   to Get the Product form db
+      function getProduct() {
+        $.ajax({
+          url: "http://localhost:3000/product",
+          method: "GET",
+          success: (res) => {
+            var row = "";
+            // console.log(res);
+            res.map((d, i) => {
+              // console.log(d);
+              row  += `  <tr>
+            <td style="color:blue; cursor:pointer" onclick="getProductById('${d._id}')">${d.p_name}</td>
+            <td>${d.price}</td>
+            <td><a onclick="deleteProduct('${d._id}')">Delete</a></td>
+            <td><a onclick="getProductById('${d._id}')">Update</a></td>
+          </tr>`;
+            });
+            $("#tbl").empty();
+            $("#tbl").append(row);
+          },
+        });
+      }
+
+    //   To Delete the Product
+      function deleteProduct(id) {
+        $.ajax({
+          url: "http://localhost:3000/product/"+id,
+          method: "DELETE",
+          success: (res) => {
+           getProduct();
+          },
+        });
+    }
+
+    // to update the product 
+    function updateProduct(){
+        let data = {
+            p_name: $("#p_name").val(),
+            price: $("#price").val(),
+            p_id: $("#p_id").val()
+        }
+        console.log(data);
+        $.ajax({
+            url:"http://localhost:3000/product/" +data.p_id,
+            method:"PUT",
+            data:JSON.stringify(data),
+            contentType:"application/json",
+            success: (res)=>{
+                getProduct();
+            }
+        });
+    }
+
+    // get Product By ID
+    function getProductById(id){
+        $("#addProduct").hide();
+        $("#update").show();
+        $.ajax({
+            url:"http://localhost:3000/product/" +id,
+            method: "GET",
+            success:(res)=>{
+                $("#p_name").val(res.p_name);
+                $("#price").val(res.price);
+                $("#p_id").val(res._id);
+            }
+        })
+    }
+    </script>
+  </body>
+</html>
