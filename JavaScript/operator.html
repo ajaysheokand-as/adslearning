@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operator </title>
+</head>
+<body>
+    <h1>Operator in Java Script</h1>
+    <p>a = 100</p>
+    <p>b = 20</p>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mult()">Multiply</button>
+    <button onclick="divi()">Divide</button>
+    <p>Result = <span id="res">....</span></p>
+    <script>
+        function add(){
+            let a = 100;
+            let b = 20;
+            let c = a+b;
+            document.getElementById("res").innerHTML=+c;
+        }
+        function sub(){
+            let a = 100;
+            let b = 20;
+            let c = a - b;
+            document.getElementById("res").innerHTML=+c;
+        }
+        function mult(){
+            let a = 100;
+            let b = 20;
+            let c = a * b;
+            document.getElementById("res").innerHTML=+c;
+        }
+        function divi(){
+            let a = 100;
+            let b = 20;
+            let c = a / b;
+            document.getElementById("res").innerHTML=+c;
+        }
+    </script>
+</body>
+</html>

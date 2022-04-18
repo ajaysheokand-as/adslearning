@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Function</title>
+</head>
+<body>
+    <h1>Using Function Show alert Box</h1>
+    <button onclick="demo()">Click Here</button>
+    <h2>To Print the Page </h2>
+    <button onclick="prnt()">Print</button>
+    <h2 id="demo1">To Change Text </h2>
+    <button onclick="chng()">Click Here to Change Text</button>
+    <script>
+        function demo(){
+            window.alert("Hi... this is Window Alert");
+        }
+        function prnt(){
+            window.print();
+        }
+        function chng(){
+            document.getElementById("demo1").innerHTML="Hi.... Look At me, I'm Changed...."
+        }
+    </script>
+</body>
+</html>
