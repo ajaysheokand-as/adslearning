@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <h1>Accesing Array Element Using Loop</h1>
+    <hr>
+    <h3>Using For Loop</h3>
+    <p id="demo"></p>
+    <hr>
+    <h3>Using ForEach Loop</h3>
+    <p id="demo1"></p>
+    <script>
+       
+        let lang = ["HTML", "CSS", "JavaScript", "ReactJS", "NodeJS"];
+        let langlen = lang.length;
+        let text = `<strong> Programming Lanuage </strong> <ul>`;
+        // console.log(langlen);
+        for(i=0; i<=langlen-1; i++){
+            text += "<li>" +lang[i]+ "</li>";
+        }
+        text += `</ul>`;
+        document.getElementById("demo").innerHTML=text;
+
+        let text1 = `<strong> Programming Lanuage </strong> <ul>`;
+        lang.forEach(myFunction);
+        text1 += `</ul>`;
+        
+        function myFunction(value){
+            text1+= "<li>" +value+ "</li>";
+        document.getElementById("demo1").innerHTML=text1;
+        }
+    </script>
+   
+</body>
+</html>

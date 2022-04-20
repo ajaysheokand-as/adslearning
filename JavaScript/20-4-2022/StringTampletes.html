@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Tampletes</title>
+</head>
+<body>
+    <h1>String Interpolation </h1>
+    <hr>
+    <p id="demo"></p>
+    <hr>
+    <strong>Using Header</strong>
+    <p id="demo1"></p>
+    <hr>
+    <strong>Variable Calculation </strong>
+    <p>a = 30 <br> b = 50 <br></p>
+    <p id="demo2"> </p>
+    <hr>
+    <script>
+        let fname = "AJAY";
+        let lname = "SHEOKAND";
+        let fullname = `Welcome ${fname}, ${lname}!`;
+        document.getElementById("demo").innerHTML=fullname;
+
+        let hdr = `<h2> ${fname} </h2>`;
+        document.getElementById("demo1").innerHTML=hdr;
+
+        let a = 30, b=50 ;
+        let multi = `Multiply = ${a * b}`;
+        document.getElementById("demo2").innerHTML=multi;
+    </script>
+</body>
+</html>

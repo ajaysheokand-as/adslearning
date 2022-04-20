@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+<body>
+    <h1>Accesing Array Element Using Loop</h1>
+    <hr>
+    <h3>Before Sorting</h3>
+    <p id="demo"></p>
+    <hr>
+    <h3>After Sorting</h3>
+    <p id="demo1"></p>
+    <hr>
+    <h3>Revrse</h3>
+    <p id="demo2"></p>
+    <script>
+       
+        let lang = ["HTML", "CSS", "JavaScript", "ReactJS", "NodeJS"];
+        let langlen = lang.length;
+       
+        document.getElementById("demo").innerHTML=lang;
+
+        lang.sort();
+        document.getElementById("demo1").innerHTML=lang;
+
+        lang.reverse();
+        document.getElementById("demo2").innerHTML=lang;
+        
+    </script>
+   
+</body>
+</html>

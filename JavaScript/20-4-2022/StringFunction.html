@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>Some Imp. Function of String in Java Script</h1>
+    <p id="demo"></p>
+    <hr>
+    <strong>Length Funtion </strong>
+    <p id="leng"></p>
+    <hr>
+    <strong>Slice Funtion </strong>
+    <p id="substrg"></p>
+    <hr>
+    <strong>Replace Function </strong>
+    <p id="rpls"></p>
+    <hr>
+    <strong>Upper Case</strong>
+    <p id="uprCase"></p>
+    <hr>
+    <strong>Lower Case</strong>
+    <p id="lwrCase"></p>
+    <script>
+        let str = "Ajay SHEOKAND";
+        document.getElementById("demo").innerHTML=str;
+        //Lenght Function
+        let len = str.length;
+        document.getElementById("leng").innerHTML = "Lenght of String is "+len+ " .";
+
+        //Slice Function 
+        let substr = str.slice(4,9);
+        document.getElementById("substrg").innerHTML = substr;
+
+        //Replace Function 
+        let newstr = str.replace("SHEOKAND","ADS HISAR");
+        document.getElementById("rpls").innerHTML = newstr;
+        
+        //Upper Case Function
+        document.getElementById("uprCase").innerHTML = str.toUpperCase();
+
+        //Lower Case Function
+        document.getElementById("lwrCase").innerHTML = str.toLowerCase();
+
+    </script>
+</body>
+</html>
