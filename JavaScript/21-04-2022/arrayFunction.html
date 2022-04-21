@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Function</title>
+</head>
+<body>
+    <h1>Map Function</h1>
+    <hr>
+    <strong>Array Element Fetch using map function</strong>
+    <p id="demo"></p>
+    <hr>
+    <h1>Filter Function</h1>
+    <strong>It Show the Value Greater than 50</strong>
+    <p id="demo1"></p>
+    <hr>
+    <h1>Every Function</h1>
+    <strong>It Show all Values are Greater than 18 or Not.</strong>
+    <p id="demo2"></p>
+    <script>
+        let ary = [30,40,50,60,70];
+        const num = ary.map(myfunction);
+        const num1 = ary.filter(myFun);
+        let evr = ary.every(evrfun);
+
+        
+        document.getElementById("demo").innerHTML = num;
+        document.getElementById("demo1").innerHTML= num1;
+        document.getElementById("demo2").innerHTML= "All array value are greater than 18 = "+evr;
+
+        function myfunction(value, index){
+            return value;
+        }
+
+        function myFun(value){
+            return value > 50;
+        }
+
+        function evrfun(value){
+            return value > 18;
+        }
+    </script>
+</body>
+</html>

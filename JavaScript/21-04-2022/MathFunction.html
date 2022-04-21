@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Function</title>
+</head>
+<body>
+    <h1>Maths Function </h1>
+    <hr>
+    <strong>PI Value</strong>
+    <p id="pi"></p>
+    <hr>
+
+    <strong>Sqrt of 2</strong>
+    <p id="sqrt"></p>
+    <hr>
+
+    <strong>Round Of Function </strong>
+    <p id="rd"></p>
+    <hr>
+
+    <strong>Ceil Function </strong>
+    <p id="ce"></p>
+    <hr>
+
+    <strong>Floor Function </strong>
+    <p id="flr"></p>
+    <hr>
+
+    <script>
+        let a = 455.6738;
+
+        document.getElementById("pi").innerHTML = "Value of Pi = " +Math.PI;
+        document.getElementById("sqrt").innerHTML = "Value of Sqrt of 2 = " +Math.SQRT2;
+        document.getElementById("rd").innerHTML = "Round of 45.6738 = " +Math.round(a);
+        document.getElementById("ce").innerHTML = "Ceil of 45.6738 = " +Math.ceil(a);
+        document.getElementById("flr").innerHTML = "Floor of 45.6738 = " +Math.floor(a);
+
+    </script>
+</body>
+</html>
