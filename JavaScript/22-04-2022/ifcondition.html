@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Condition</title>
+</head>
+<body>
+    <h1>If Condition Using Java Script </h1>
+    <hr>
+    <strong>Check your are Eligible to Vote or Not</strong><br><br>
+    <form>
+        <!-- <label>Enter Your Age</label> -->
+        <input type="number" id="age" placeholder="Enter Your Age"><br><br>
+        
+    </form>
+    <button onclick="vote()">Check </button><br><br>
+    <b id="re"></b>
+    <script>
+        
+        function vote(){
+
+            var age = document.getElementById('age').value;
+            console.log(age);
+            var res = " ";
+            if(age>18){
+                res = "You are Eligble to Vote";
+                document.getElementById("re").innerHTML="Congratulation! "+res;
+            }
+            else{
+                res="You are not Eligble to Vote";
+                document.getElementById("re").innerHTML="Sorry "+res;
+            }
+            // document.getElementById("re").innerHTML="res";
+            
+        }
+    </script>
+</body>
+</html>

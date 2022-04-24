@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <h1>For Loop</h1>
+    <hr>
+    <strong>Print Number 1 to 100 Using For Loop</strong>
+    <p id="lp"></p>
+    <hr>
+    <strong>Fetch Data From Array Using For Loop</strong>
+    <p id="ar"></p>
+    <script>
+        let n = "";
+        
+        for (let i = 0; i <= 100; i++) {
+          n += " " + i + "\t";
+        }
+        
+        document.getElementById("lp").innerHTML = n;
+
+        let compLang = ["C", "CPP", "HTML", "CSS", "Java Script"];
+        text = "";
+        for(let i = 0; i<= compLang.length; i++){
+            text += compLang[i] + "<br>";
+        }
+        document.getElementById("ar").innerHTML = text;
+        </script>
+        
+</body>
+</html>

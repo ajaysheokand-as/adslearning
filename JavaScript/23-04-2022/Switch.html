@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+   
+</head>
+<body>
+    <h1>Switch Statment</h1>
+    <hr><br>
+    <strong>Get A Day Monday to Sunday According to Number Using Switch Case 
+    </strong><br><br>
+    <input type="number" id="a" placeholder="Enter a number 1 - 7"><br><br>
+    <button onclick="op()">Submit</button>
+    <p id="day"></p>
+    
+
+    <script>
+        function op(){
+        let a = document.getElementById("a").value;
+        let b = parseInt(a);
+        switch(b){
+           case 1:
+               document.getElementById("day").innerHTML = "Day is Monday";
+            break;
+            case 2:
+               document.getElementById("day").innerHTML = "Day is Tuesday";
+            break;
+            case 3:
+               document.getElementById("day").innerHTML = "Day is Wednesday";
+            break;
+            case 4:
+               document.getElementById("day").innerHTML = "Day is Thursday";
+            break;
+            case 5:
+               document.getElementById("day").innerHTML = "Day is Friday";
+            break;
+            case 6:
+               document.getElementById("day").innerHTML = "Day is Saturday";
+            break;
+            case 7:
+               document.getElementById("day").innerHTML = "Day is Sunday";
+            break;
+            default:
+                document.getElementById("day").innerHTML = "Enter a Number 1-7";
+
+
+       }
+    }
+    </script>
+</body>
+</html>
