@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Accossor</title>
+</head>
+<body>
+    <h1>Object </h1>
+    <hr>
+    <p id="demo"></p>
+
+    <strong>Accessing Object (Get Function)</strong>
+    <p id="demo1"></p>
+
+    <strong>Set Value (Setter Funtion)</strong>
+    <p id="demo2"></p>
+    <script>
+        const person = {
+          name: "John",
+          age: 30,
+          city: "India",
+          get cty() {return this.city.toUpperCase();}, 
+          set ag(val){return this.age}
+        };
+        
+        person.age = "22";
+        let txt = JSON.stringify(person);
+        document.getElementById("demo").innerHTML = JSON.stringify(person);
+        document.getElementById("demo1").innerHTML = person.cty;
+        document.getElementById("demo2").innerHTML = person.age;
+        </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hoisting </h1>
+    <hr>
+    <p>Use the Variable before Decelaration </p>
+    <p id="demo"></p>
+
+    <script>
+      x = 5; // Assign 5 to x
+
+      elem = document.getElementById("demo");
+      var x; // Declare x
+      elem.innerHTML = x;
+    </script>
+  </body>
+</html>

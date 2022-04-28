@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objects Creating, Adding Value, and Accessing with . Properties </h1>
+    <hr>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+          firstname: "John",
+          lastname: "Doe",
+          age: 50,
+          eyecolor: "blue"
+        };
+        person.city = "Hisar";
+        document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old.";
+
+        document.getElementById("demo1").innerHTML =person.firstname + " from " + person.city;
+        </script>
+</body>
+</html>
