@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom HTML Element </title>
+</head>
+<body>
+    <h1>Dom HTML Element </h1>
+    <button id="demo" onclick="tx()">Click Me </button>
+    <p id="txt">Hi.....</p>
+
+    <script>
+        document.write("Using Write Function "+ "<br>");
+        document.write(Date());
+
+        function tx (){
+            document.getElementById("txt").innerHTML += "<br>" + "How Are you??" ;
+        }
+    </script>
+</body>
+</html>

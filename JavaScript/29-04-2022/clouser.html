@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser</title>
+</head>
+<body>
+    <h1>Clouser </h1>
+    <hr>
+    <pre>
+    n1 = 4
+    n2 = 5
+    n3 = 6
+</pre>
+    example 1
+    <p id="demo"></p>
+
+    example 2 
+    <p id="demo1"></p>
+    
+    <script>
+      const  count = function(){
+            let a =0;
+            return function(){
+
+                document.getElementById("demo").innerHTML = ++a;
+            };
+      }
+      
+      var sum = function s(a,b,c){
+          return{
+              sumtwo:function(){
+                  console.log(a+b);
+                  return document.getElementById("demo").innerHTML = a+b;
+              },
+              sumthree:function (){
+                console.log(a+b+c);
+                return document.getElementById("demo1").innerHTML = a+b+c;
+              }
+          }
+      }
+
+      const add = count();
+      add();
+      add();
+      add();
+      add();
+      add();
+
+      var s3 = sum(4,5,6);
+      s3.sumthree();
+      s3.sumtwo();
+    </script>
+</body>
+</html>
