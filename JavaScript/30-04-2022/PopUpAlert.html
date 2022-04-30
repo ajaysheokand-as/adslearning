@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Alert</h2>
+<hr>
+<button onclick="myFunction()">Click Me for Alert Box</button><br><br>
+<button onclick="cnfrmFunction()">Click Me for Confirm & Cancel</button><br><br>
+<button onclick="pFunction()">Click Me for Confirm & Cancel</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+
+function cnfrmFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+function pFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Name ....");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "<br>" + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

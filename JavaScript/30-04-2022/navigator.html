@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+<hr>
+<p>The onLine property returns true if the browser is online:</p>
+
+<p id="demo"></p>
+
+<strong>Language</strong>
+<p id="demo1"></p>
+
+<strong>Platform</strong>
+<p id="demo2"></p>
+
+<strong>App Version</strong>
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.onLine is " + navigator.onLine;
+
+document.getElementById("demo1").innerHTML = navigator.language;
+
+document.getElementById("demo2").innerHTML = navigator.platform;
+
+document.getElementById("demo3").innerHTML = navigator.appVersion;
+
+
+</script>
+
+</body>
+</html>
