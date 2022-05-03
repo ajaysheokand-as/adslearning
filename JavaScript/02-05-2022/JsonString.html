@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+
+<p id="demo"></p>
+
+<h2>Convert a string into a function.</h2>
+<p id="demo1"></p>
+
+<h2>Parsing a JSON Array.</h2>
+<p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+<p id="demo2"></p>
+<script>
+const txt = '{"name":"John", "age":30, "city":"New York"}'
+const obj = JSON.parse(txt);
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+
+const text = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+const obj1 = JSON.parse(text);
+obj1.age = eval("(" + obj1.age + ")");
+document.getElementById("demo1").innerHTML = obj1.name + ", " + obj1.age(); 
+
+const text1 = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+const myArr = JSON.parse(text1);
+document.getElementById("demo2").innerHTML = myArr[0];
+</script>
+
+</body>
+</html>
