@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <AddUser onAddUser={addUserHandler} />
-      <UserList users={[]} />
+      <UserList users={userList} />
     </div>
   );
 }
